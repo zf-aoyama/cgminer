@@ -507,7 +507,7 @@ AM_CONDITIONAL([HAS_MINION], [test x$minion = xyes])
 bm1370="no"
 
 AC_ARG_ENABLE([bm1370],
-        [AC_HELP_STRING([--enable-bm1370],[Compile support for BM1370 ASICs test driver (default disabled)])],
+        [AC_HELP_STRING([--enable-bm1370],[Compile support for BM1370 ASIC driver (default disabled)])],
         [bm1370=$enableval]
         )
 if test "x$bm1370" = xyes; then
