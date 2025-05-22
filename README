@@ -1242,6 +1242,18 @@ USB on any hardware are the following:
 --enable-icarus
 --enable-klondike
 
+Q: How can I run cgminer without hardware for testing?
+A: Build cgminer with the BM1370 test driver and run it without connecting
+   any ASIC devices. Example:
+   ```
+   ./autogen.sh
+   ./configure --enable-bm1370
+   make
+   ./cgminer -T --api-listen
+   ```
+   The program will output messages such as "BM1370 test driver running without
+   attached hardware" to confirm it is operating.
+
 Q: How do I use the --decode function to decode a pool's coinbase?
 A: You need to have a bitcoind with server functionality and pass it the
 credentials as the first pool in your config, and pass the pool's address that
