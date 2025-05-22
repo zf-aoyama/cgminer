@@ -39,7 +39,7 @@ install-sh
 stamp-h1
 cpuminer-config.h*
 compile
-test-driver
+compat/jansson-2.9/test-driver
 config.log
 config.status
 config.guess
