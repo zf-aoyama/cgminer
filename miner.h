@@ -264,9 +264,10 @@ static inline int fsync (int fd)
 	DRIVER_ADD_COMMAND(hashratio) \
 	DRIVER_ADD_COMMAND(icarus) \
 	DRIVER_ADD_COMMAND(klondike) \
-	DRIVER_ADD_COMMAND(knc) \
-	DRIVER_ADD_COMMAND(minion) \
-	DRIVER_ADD_COMMAND(sp10) \
+        DRIVER_ADD_COMMAND(knc) \
+        DRIVER_ADD_COMMAND(minion) \
+        DRIVER_ADD_COMMAND(bm1370) \
+        DRIVER_ADD_COMMAND(sp10) \
 	DRIVER_ADD_COMMAND(sp30) \
 	DRIVER_ADD_COMMAND(bitmain_soc)
 

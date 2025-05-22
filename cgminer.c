@@ -131,6 +131,9 @@ char *curly = ":D";
 #ifdef USE_HASHFAST
 #include "driver-hashfast.h"
 #endif
+#ifdef USE_BM1370
+#include "driver-bm1370.h"
+#endif
 
 #if defined(USE_ANT_S1) || defined(USE_ANT_S2) || defined(USE_ANT_S3)
 #include "driver-bitmain.h"
@@ -2517,10 +2520,13 @@ static char *opt_verusage_and_exit(const char *extra)
 		"BaB "
 #endif
 #ifdef USE_MINION
-		"minion "
+                "minion "
+#endif
+#ifdef USE_BM1370
+                "bm1370 "
 #endif
 #ifdef USE_MODMINER
-		"modminer "
+                "modminer "
 #endif
 #ifdef USE_BITMINE_A1
 		"Bitmine.A1 "
