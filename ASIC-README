@@ -30,6 +30,10 @@ Currently supported devices include:
 - Spondoolies SP10, SP30
 - BM1370 test device
 
+The BM1370 driver is for testing purposes only and does not require any
+hardware. It periodically logs test messages so you can confirm cgminer is
+running correctly. See `BM1370-TEST.md` for usage instructions.
+
 
 No COM ports on windows or TTY devices will be used by cgminer as it
 communicates directly with them via USB so it is normal for them to not exist or
