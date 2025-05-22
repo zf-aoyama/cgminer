@@ -194,6 +194,10 @@ if HAS_MINION
 cgminer_SOURCES += driver-minion.c
 endif
 
+if HAS_BM1370
+cgminer_SOURCES += driver-bm1370.c driver-bm1370.h
+endif
+
 if HAS_ANT_S1
 cgminer_SOURCES += driver-bitmain.c driver-bitmain.h
 endif

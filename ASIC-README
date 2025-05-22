@@ -28,6 +28,7 @@ Currently supported devices include:
 - Onestring miner USB
 - Rockminer R-Box/RK-Box/T1/New R-Box
 - Spondoolies SP10, SP30
+- BM1370 test device
 
 
 No COM ports on windows or TTY devices will be used by cgminer as it

@@ -504,6 +504,18 @@ fi
 AM_CONDITIONAL([HAS_MINION], [test x$minion = xyes])
 
 
+bm1370="no"
+
+AC_ARG_ENABLE([bm1370],
+        [AC_HELP_STRING([--enable-bm1370],[Compile support for BM1370 ASICs test driver (default disabled)])],
+        [bm1370=$enableval]
+        )
+if test "x$bm1370" = xyes; then
+        AC_DEFINE([USE_BM1370], [1], [Defined to 1 if BM1370 ASIC support is wanted])
+        drivercount=x$drivercount
+fi
+AM_CONDITIONAL([HAS_BM1370], [test x$bm1370 = xyes])
+
 modminer="no"
 
 AC_ARG_ENABLE([modminer],
@@ -925,9 +937,15 @@ else
 fi
 
 if test "x$bitmine_A1" = xyes; then
-	echo "  Bitmine-A1.ASICs.....: Enabled"
+        echo "  Bitmine-A1.ASICs.....: Enabled"
 else
-	echo "  Bitmine-A1.ASICs.....: Disabled"
+        echo "  Bitmine-A1.ASICs.....: Disabled"
+fi
+
+if test "x$bm1370" = xyes; then
+        echo "  BM1370.ASICs.........: Enabled"
+else
+        echo "  BM1370.ASICs.........: Disabled"
 fi
 
 if test "x$dragonmint_t1" = xyes; then
@@ -979,7 +997,7 @@ else
 fi
 
 #Add any new device to this, along with a no on the end of the test
-if test "x$avalon$avalon2$avalon4$avalon7$avalon8$avalon_miner$bab$bflsc$bitforce$bitfury$bitfury16$bitmain_soc$blockerupter$hashfast$hashratio$icarus$klondike$knc$modminer$drillbit$minion$cointerra$bitmine_A1$ants1$ants2$ants3$sp10$sp30$dragonmint_t1" = xnononononononononononononononononononononononononononono; then
+if test "x$avalon$avalon2$avalon4$avalon7$avalon8$avalon_miner$bab$bflsc$bitforce$bitfury$bitfury16$bitmain_soc$blockerupter$hashfast$hashratio$icarus$klondike$knc$modminer$drillbit$minion$cointerra$bitmine_A1$bm1370$ants1$ants2$ants3$sp10$sp30$dragonmint_t1" = xnonononononononononononononononononononononononononononon; then
 	echo
 	AC_MSG_ERROR([No mining devices configured in])
 	echo

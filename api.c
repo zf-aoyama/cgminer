@@ -29,7 +29,7 @@
 #if defined(USE_BFLSC) || defined(USE_AVALON) || defined(USE_AVALON2) || defined(USE_AVALON4) || \
   defined(USE_HASHFAST) || defined(USE_BITFURY) || defined(USE_BITFURY16) || defined(USE_BLOCKERUPTER) || defined(USE_KLONDIKE) || \
 	defined(USE_KNC) || defined(USE_BAB) || defined(USE_DRAGONMINT_T1) || defined(USE_DRILLBIT) || \
-	defined(USE_MINION) || defined(USE_COINTERRA) || defined(USE_BITMINE_A1) || \
+        defined(USE_MINION) || defined(USE_COINTERRA) || defined(USE_BITMINE_A1) || defined(USE_BM1370) || \
 	defined(USE_ANT_S1) || defined(USE_ANT_S2) || defined(USE_ANT_S3) || defined(USE_SP10) || \
 	defined(USE_SP30) || defined(USE_ICARUS) || defined(USE_HASHRATIO) || defined(USE_AVALON_MINER) || \
 	defined(USE_AVALON7) || defined(USE_AVALON8) || defined(USE_BITMAIN_SOC)
@@ -212,10 +212,13 @@ static const char *DEVICECODE = ""
 			"KnC "
 #endif
 #ifdef USE_MINION
-			"MBA "
+                        "MBA "
+#endif
+#ifdef USE_BM1370
+                        "B70 "
 #endif
 #ifdef USE_MODMINER
-			"MMQ "
+                        "MMQ "
 #endif
 #ifdef USE_COINTERRA
 			"CTA "
