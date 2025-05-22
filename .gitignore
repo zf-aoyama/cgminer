@@ -4,6 +4,7 @@ nbproject
 jansson.pc
 compat/jansson-2.9/src/jansson_config.h
 compat/jansson-2.9/jansson_private_config.h
+compat/jansson-2.9/jansson_private_config.h.in
 libtool
 ltmain.sh
 libtool.m4
@@ -38,6 +39,7 @@ install-sh
 stamp-h1
 cpuminer-config.h*
 compile
+compat/jansson-2.9/test-driver
 config.log
 config.status
 config.guess
